@@ -3,24 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FestVerse | Speakers</title>
+    <title>EventHub | Speakers</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
-    <header>
-        <h1>FestVerse</h1>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-        <nav>
+    <header>
+        <h1>EventHub</h1>
+
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-links" aria-label="Primary navigation">
             <a href="home.html">Home</a>
             <a href="schedule.html">Schedule</a>
-            <a href="speakers.html">Speakers</a>
+            <a href="speakers.html" class="active">Speakers</a>
             <a href="register.html">Register</a>
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
 
         <section>
             <h2>Meet Our Guest Speakers</h2>
@@ -29,12 +37,14 @@
                 Meet the inspiring student leaders behind WellNest, a startup dedicated to
                 improving student mental well-being through technology and innovation.
             </p>
+
+            <input type="search" id="speakerSearch" placeholder="Search speakers or sessions" aria-label="Search speakers" />
         </section>
 
-        <section>
+        <section id="speakerList">
 
-            <article>
-                <img src="./assets/images/Sindhu.jpeg" alt="Sindhu J"  height="450" width="400">
+            <article class="speaker-card" data-search="Sindhu J From Idea to Impact Building a Student Startup">
+                <img src="./assets/images/Sindhu.jpeg" alt="Sindhu J" loading="lazy" decoding="async" height="450" width="400">
 
                 <h3>Sindhu J</h3>
 
@@ -46,10 +56,9 @@
             </article>
 
             <hr>
-                        <hr>
 
-            <article>
-                <img src="./assets/images/Athira.jpeg" alt="Athira"  height="450" width="400">
+            <article class="speaker-card" data-search="Athira Turning Student Challenges into Real Solutions">
+                <img src="./assets/images/Athira.jpeg" alt="Athira" loading="lazy" decoding="async" height="450" width="400">
 
                 <h3>Athira</h3>
 
@@ -62,8 +71,8 @@
 
             <hr>
 
-            <article>
-                <img src="./assets/images/Vismaya.jpeg" alt="Vismaya S M" height="400" width="400">
+            <article class="speaker-card" data-search="Vismaya S M Leading Innovation with Purpose">
+                <img src="./assets/images/Vismaya.jpeg" alt="Vismaya S M" loading="lazy" decoding="async" height="400" width="400">
 
                 <h3>Vismaya S M</h3>
 
@@ -76,8 +85,8 @@
 
 
 
-            <article>
-                <img src="./assets/images/Shivani.jpeg" alt="Shivani A"  height="450" width="400">
+            <article class="speaker-card" data-search="Shivani A Building AI Solutions for Student Mental Well-being">
+                <img src="./assets/images/Shivani.jpeg" alt="Shivani A" loading="lazy" decoding="async" height="450" width="400">
 
                 <h3>Shivani A</h3>
 
@@ -94,15 +103,16 @@
 
     <footer>
 
-        <h3>FestVerse</h3>
+        <h3>EventHub</h3>
 
-        <p>Email: festverse2026@gmail.com</p>
+        <p>Email: hello@eventhubfest.com</p>
 
         <p>Instagram | LinkedIn | YouTube</p>
 
-        <p>&copy; 2026 FestVerse. All Rights Reserved.</p>
+        <p>&copy; 2026 EventHub. All Rights Reserved.</p>
 
     </footer>
 
+<script src="js/script.js" defer></script>
 </body>
 </html>

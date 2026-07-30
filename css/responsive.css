@@ -22,6 +22,34 @@
   }
 }
 
+@media (max-width: 760px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  header {
+    flex-wrap: wrap;
+  }
+
+  nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav a {
+    width: 100%;
+    padding: 0.3rem 0;
+  }
+}
+
 @media (max-width: 640px) {
   body {
     line-height: 1.6;

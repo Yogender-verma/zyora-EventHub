@@ -3,30 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FestVerse | Register</title>
+    <title>EventHub | Register</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
 <header>
 
-    <h1>FestVerse</h1>
+    <h1>EventHub</h1>
 
-    <nav>
+    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="nav-links" aria-label="Primary navigation">
         <a href="home.html">Home</a>
         <a href="schedule.html">Schedule</a>
         <a href="speakers.html">Speakers</a>
-        <a href="register.html">Register</a>
+        <a href="register.html" class="active">Register</a>
     </nav>
 
 </header>
 
-<main>
+<main id="main-content">
 
 <section>
 
-    <h2>Register for FestVerse 2026</h2>
+    <h2>Register for EventHub 2026</h2>
 
     <p>
         Fill out the registration form below and reserve your place for the
@@ -37,9 +45,9 @@
 
 <section>
 
-<section>
+<section class="form-card">
 
-<form>
+<form class="validate-form" novalidate>
 
 <label for="name">Full Name</label><br>
 <input type="text" id="name" required><br><br>
@@ -111,15 +119,16 @@ I agree to the event rules and code of conduct.
 
 <footer>
 
-<p>FestVerse 2026</p>
+<p>EventHub 2026</p>
 
-<p>Email: festverse2026@gmail.com</p>
+<p>Email: hello@eventhubfest.com</p>
 
 <p>Instagram | LinkedIn | YouTube</p>
 
-<p>&copy; 2026 FestVerse. All Rights Reserved.</p>
+<p>&copy; 2026 EventHub. All Rights Reserved.</p>
 
 </footer>
 
+<script src="js/register.js" defer></script>
 </body>
 </html>
