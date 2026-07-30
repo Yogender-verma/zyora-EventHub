@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
-  <body>
+  <body data-page="schedule">
     <header>
       <h1>EventHub</h1>
       <nav aria-label="Primary navigation">
@@ -46,8 +46,21 @@
           </div>
         </div>
 
+        <div class="schedule-controls">
+          <label class="sr-only" for="event-search">Search sessions</label>
+          <input type="search" id="event-search" placeholder="Search sessions" />
+          <div class="filter-chips" role="group" aria-label="Filter schedule by day">
+            <button type="button" class="filter-chip active" data-filter="all">All days</button>
+            <button type="button" class="filter-chip" data-filter="day-1">Day 1</button>
+            <button type="button" class="filter-chip" data-filter="day-2">Day 2</button>
+            <button type="button" class="filter-chip" data-filter="day-3">Day 3</button>
+          </div>
+        </div>
+
+        <p class="empty-state" id="schedule-empty" hidden>No results found for this filter.</p>
+
         <div class="schedule-grid">
-          <section class="schedule-day-card" aria-labelledby="day1-title">
+          <section class="schedule-day-card" data-day="day-1" aria-labelledby="day1-title">
             <h2 id="day1-title"><span class="day-pill">Day 1</span> Opening Day</h2>
             <article class="schedule-event">
               <p class="schedule-time">09:00 AM</p>
@@ -69,7 +82,7 @@
             </article>
           </section>
 
-          <section class="schedule-day-card" aria-labelledby="day2-title">
+          <section class="schedule-day-card" data-day="day-2" aria-labelledby="day2-title">
             <h2 id="day2-title"><span class="day-pill">Day 2</span> Creativity and Learning</h2>
             <article class="schedule-event">
               <p class="schedule-time">10:00 AM</p>
@@ -91,7 +104,7 @@
             </article>
           </section>
 
-          <section class="schedule-day-card" aria-labelledby="day3-title">
+          <section class="schedule-day-card" data-day="day-3" aria-labelledby="day3-title">
             <h2 id="day3-title"><span class="day-pill">Day 3</span> Grand Finale</h2>
             <article class="schedule-event">
               <p class="schedule-time">09:30 AM</p>
@@ -119,5 +132,6 @@
     <footer>
       <p>&copy; 2026 EventHub. All rights reserved.</p>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
