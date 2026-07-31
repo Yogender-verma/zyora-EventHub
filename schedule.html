@@ -3,17 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EventHub | Schedule</title>
+    <title>EventHub | Festival Schedule</title>
     <meta
       name="description"
-      content="Explore the complete schedule for EventHub, the annual college fest."
+      content="Explore the complete live schedule for EventHub, the annual college fest."
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
   </head>
   <body data-page="schedule">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header>
       <h1>EventHub</h1>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav aria-label="Primary navigation">
         <a href="home.html">Home</a>
         <a href="schedule.html" class="active">Schedule</a>
@@ -22,13 +29,13 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="schedule-page" aria-labelledby="schedule-title">
         <div class="schedule-hero">
           <div>
             <p class="eyebrow">Event Timeline</p>
             <h1 id="schedule-title">Festival Schedule</h1>
-            <p>Plan your days around the biggest talks, performances, and interactive sessions.</p>
+            <p>Plan your festival itinerary, filter events by day, search sessions, and bookmark favorites to your local schedule.</p>
           </div>
           <div class="schedule-highlights" aria-label="At a glance">
             <div>
@@ -36,7 +43,7 @@
               <span>of nonstop energy</span>
             </div>
             <div>
-              <strong>14+ Sessions</strong>
+              <strong>12+ Live Sessions</strong>
               <span>from workshops to concerts</span>
             </div>
             <div>
@@ -47,91 +54,51 @@
         </div>
 
         <div class="schedule-controls">
-          <label class="sr-only" for="event-search">Search sessions</label>
-          <input type="search" id="event-search" placeholder="Search sessions" />
+          <div class="search-wrapper">
+            <label class="sr-only" for="event-search">Search sessions</label>
+            <input type="search" id="event-search" placeholder="🔍 Search by title, speaker or venue..." />
+          </div>
+
           <div class="filter-chips" role="group" aria-label="Filter schedule by day">
             <button type="button" class="filter-chip active" data-filter="all">All days</button>
             <button type="button" class="filter-chip" data-filter="day-1">Day 1</button>
             <button type="button" class="filter-chip" data-filter="day-2">Day 2</button>
             <button type="button" class="filter-chip" data-filter="day-3">Day 3</button>
+            <button type="button" class="filter-chip bookmark-chip" data-filter="bookmarks">
+              ⭐ My Bookmarks (<span id="bookmark-count">0</span>)
+            </button>
           </div>
         </div>
 
-        <p class="empty-state" id="schedule-empty" hidden>No results found for this filter.</p>
-
-        <div class="schedule-grid">
-          <section class="schedule-day-card" data-day="day-1" aria-labelledby="day1-title">
-            <h2 id="day1-title"><span class="day-pill">Day 1</span> Opening Day</h2>
-            <article class="schedule-event">
-              <p class="schedule-time">09:00 AM</p>
-              <h3>Inauguration Ceremony</h3>
-              <p class="schedule-meta"><span class="venue-badge">Main Auditorium</span></p>
-              <p>Welcome remarks, cultural performances, and the official opening of EventHub.</p>
-            </article>
-            <article class="schedule-event">
-              <p class="schedule-time">11:30 AM</p>
-              <h3>Innovation Expo</h3>
-              <p class="schedule-meta"><span class="venue-badge">Exhibition Hall A</span></p>
-              <p>Explore student projects, startup booths, and interactive displays.</p>
-            </article>
-            <article class="schedule-event">
-              <p class="schedule-time">07:00 PM</p>
-              <h3>Opening Night Concert</h3>
-              <p class="schedule-meta"><span class="venue-badge">Open Air Stage</span></p>
-              <p>Kick off the fest with live music and a spectacular campus celebration.</p>
-            </article>
-          </section>
-
-          <section class="schedule-day-card" data-day="day-2" aria-labelledby="day2-title">
-            <h2 id="day2-title"><span class="day-pill">Day 2</span> Creativity and Learning</h2>
-            <article class="schedule-event">
-              <p class="schedule-time">10:00 AM</p>
-              <h3>Design and AI Workshop</h3>
-              <p class="schedule-meta"><span class="venue-badge">Innovation Lab</span></p>
-              <p>A hands-on session on building smarter products with AI and design thinking.</p>
-            </article>
-            <article class="schedule-event">
-              <p class="schedule-time">01:30 PM</p>
-              <h3>Panel Discussion: The Future of Work</h3>
-              <p class="schedule-meta"><span class="venue-badge">Conference Room 2</span></p>
-              <p>Industry experts discuss emerging skills, remote collaboration, and career readiness.</p>
-            </article>
-            <article class="schedule-event">
-              <p class="schedule-time">08:00 PM</p>
-              <h3>Cultural Night</h3>
-              <p class="schedule-meta"><span class="venue-badge">Amphitheatre</span></p>
-              <p>Dance, drama, and music performances showcasing student talent from across campus.</p>
-            </article>
-          </section>
-
-          <section class="schedule-day-card" data-day="day-3" aria-labelledby="day3-title">
-            <h2 id="day3-title"><span class="day-pill">Day 3</span> Grand Finale</h2>
-            <article class="schedule-event">
-              <p class="schedule-time">09:30 AM</p>
-              <h3>Hackathon Finale</h3>
-              <p class="schedule-meta"><span class="venue-badge">Tech Block</span></p>
-              <p>Teams present their final solutions and compete for top honors.</p>
-            </article>
-            <article class="schedule-event">
-              <p class="schedule-time">03:00 PM</p>
-              <h3>Awards and Closing Ceremony</h3>
-              <p class="schedule-meta"><span class="venue-badge">Main Auditorium</span></p>
-              <p>Recognize winners, celebrate participants, and close the festival in style.</p>
-            </article>
-            <article class="schedule-event">
-              <p class="schedule-time">06:30 PM</p>
-              <h3>Farewell Sunset Jam</h3>
-              <p class="schedule-meta"><span class="venue-badge">Rooftop Garden</span></p>
-              <p>A relaxed evening of music, networking, and final memories with friends.</p>
-            </article>
-          </section>
+        <!-- 1. Loading State -->
+        <div id="schedule-loading" class="data-state loading-state">
+          <div class="spinner" aria-label="Loading schedule"></div>
+          <p>Fetching live schedule data...</p>
         </div>
+
+        <!-- 2. Error State -->
+        <div id="schedule-error" class="data-state error-state" hidden>
+          <div class="error-icon">⚠️</div>
+          <div class="error-details">
+            <h3>Unable to load festival schedule</h3>
+            <p id="schedule-error-msg">Network error occurred while retrieving schedule. Check your Wi-Fi or connection.</p>
+            <button type="button" id="retry-schedule-btn" class="cta-button">🔄 Retry Fetching Schedule</button>
+          </div>
+        </div>
+
+        <!-- Empty State message -->
+        <p class="empty-state" id="schedule-empty" hidden>No events match your current filter or search criteria.</p>
+
+        <!-- 3. Dynamic Schedule Grid Container (Populated via JS fetch) -->
+        <div id="schedule-grid" class="schedule-grid" hidden></div>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2026 EventHub. All rights reserved.</p>
+      <h3>EventHub 2026</h3>
+      <p>&copy; 2026 EventHub. All rights reserved. Developed for ZyoraByte Internship.</p>
     </footer>
-    <script src="js/script.js"></script>
+
+    <script src="js/script.js" defer></script>
   </body>
 </html>
