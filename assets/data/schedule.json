@@ -1,0 +1,122 @@
+[
+  {
+    "id": "evt-101",
+    "day": "day-1",
+    "time": "09:00 AM",
+    "title": "Inauguration Ceremony",
+    "venue": "Main Auditorium",
+    "speaker": "Fest Committee & Special Guests",
+    "description": "Welcome remarks, cultural performances, and the official opening of EventHub 2026.",
+    "tag": "Ceremony"
+  },
+  {
+    "id": "evt-102",
+    "day": "day-1",
+    "time": "11:30 AM",
+    "title": "Innovation Expo & Tech Showcase",
+    "venue": "Exhibition Hall A",
+    "speaker": "Student Innovators & Startups",
+    "description": "Explore student projects, startup booths, interactive tech displays, and prototype demos.",
+    "tag": "Exhibition"
+  },
+  {
+    "id": "evt-103",
+    "day": "day-1",
+    "time": "02:00 PM",
+    "title": "From Idea to Impact – Building a Student Startup",
+    "venue": "Seminar Hall 1",
+    "speaker": "Sindhu J (Founder, WellNest)",
+    "description": "Learn how to transform your campus project into a venture-backed startup.",
+    "tag": "Keynote"
+  },
+  {
+    "id": "evt-104",
+    "day": "day-1",
+    "time": "07:00 PM",
+    "title": "Opening Night Concert",
+    "venue": "Open Air Stage",
+    "speaker": "Campus Beats & Guest Bands",
+    "description": "Kick off the fest with live music, DJ sets, and a spectacular campus celebration under the stars.",
+    "tag": "Concert"
+  },
+  {
+    "id": "evt-201",
+    "day": "day-2",
+    "time": "10:00 AM",
+    "title": "Design and AI Workshop",
+    "venue": "Innovation Lab",
+    "speaker": "Shivani A (CTO, WellNest)",
+    "description": "A hands-on session on building smarter products with AI tools and modern design thinking.",
+    "tag": "Workshop"
+  },
+  {
+    "id": "evt-202",
+    "day": "day-2",
+    "time": "01:30 PM",
+    "title": "Panel Discussion: The Future of Work & AI",
+    "venue": "Conference Room 2",
+    "speaker": "Industry Mentors & Alumni",
+    "description": "Industry experts discuss emerging tech skills, remote collaboration, and career readiness.",
+    "tag": "Panel"
+  },
+  {
+    "id": "evt-203",
+    "day": "day-2",
+    "time": "04:00 PM",
+    "title": "UI/UX Design Challenge Sprint",
+    "venue": "Design Studio B",
+    "speaker": "Design Club Mentors",
+    "description": "Rapid prototyping contest for student designers solving real campus accessibility challenges.",
+    "tag": "Competition"
+  },
+  {
+    "id": "evt-204",
+    "day": "day-2",
+    "time": "08:00 PM",
+    "title": "Grand Cultural Night",
+    "venue": "Amphitheatre",
+    "speaker": "Cultural Society & Performing Arts",
+    "description": "Dance, drama, and music performances showcasing student talent from across colleges.",
+    "tag": "Culture"
+  },
+  {
+    "id": "evt-301",
+    "day": "day-3",
+    "time": "09:30 AM",
+    "title": "24-Hour Hackathon Finale Demos",
+    "venue": "Tech Block",
+    "speaker": "Hackathon Finalist Teams",
+    "description": "Top 10 finalist teams present their live software/hardware solutions to judges.",
+    "tag": "Hackathon"
+  },
+  {
+    "id": "evt-302",
+    "day": "day-3",
+    "time": "01:00 PM",
+    "title": "Leading Innovation with Purpose",
+    "venue": "Main Auditorium",
+    "speaker": "Vismaya S M (CEO, WellNest)",
+    "description": "An inspiring talk on empathetic leadership and driving sustainable impact in tech.",
+    "tag": "Keynote"
+  },
+  {
+    "id": "evt-303",
+    "day": "day-3",
+    "time": "03:30 PM",
+    "title": "Awards and Closing Ceremony",
+    "venue": "Main Auditorium",
+    "speaker": "Fest Organizing Committee",
+    "description": "Recognize winners, award prize trophies, celebrate participants, and officially close the festival.",
+    "tag": "Ceremony"
+  },
+  {
+    "id": "evt-304",
+    "day": "day-3",
+    "time": "06:30 PM",
+    "title": "Farewell Sunset Jam & Acoustic Night",
+    "venue": "Rooftop Garden",
+    "speaker": "Acoustic Band & Open Mic",
+    "description": "A relaxed evening of indie music, networking, coffee, and final memories with friends.",
+    "tag": "Concert"
+  }
+]
