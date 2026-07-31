@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Sindhu J",
+    "role": "Founder, WellNest",
+    "session": "From Idea to Impact – Building a Student Startup",
+    "image": "./assets/images/Sindhu.jpeg"
+  },
+  {
+    "name": "Athira",
+    "role": "Co-Founder, WellNest",
+    "session": "Turning Student Challenges into Real Solutions",
+    "image": "./assets/images/Athira.jpeg"
+  },
+  {
+    "name": "Vismaya S M",
+    "role": "Chief Executive Officer (CEO), WellNest",
+    "session": "Leading Innovation with Purpose",
+    "image": "./assets/images/Vismaya.jpeg"
+  },
+  {
+    "name": "Shivani A",
+    "role": "Chief Technology Officer (CTO), WellNest",
+    "session": "Building AI Solutions for Student Mental Well-being",
+    "image": "./assets/images/Shivani.jpeg"
+  }
+]
