@@ -1,104 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EventHub | Festival Schedule</title>
-    <meta
-      name="description"
-      content="Explore the complete live schedule for EventHub, the annual college fest."
-    />
+    <meta name="description" content="Explore the complete live schedule for EventHub, the annual college fest." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-  </head>
-  <body data-page="schedule">
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+</head>
+<body data-page="schedule">
 
     <header>
-      <h1>EventHub</h1>
-      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav aria-label="Primary navigation">
-        <a href="home.html">Home</a>
-        <a href="schedule.html" class="active">Schedule</a>
-        <a href="speakers.html">Speakers</a>
-        <a href="register.html">Register</a>
-      </nav>
+        <div class="brand">
+            <a href="index.html" class="logo-link">
+                <span class="logo-icon">🎉</span>
+                <h1>EventHub</h1>
+            </a>
+        </div>
+
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="schedule.html" class="active" aria-current="page">Schedule</a>
+            <a href="speakers.html">Speakers</a>
+            <a href="register.html">Register</a>
+        </nav>
     </header>
 
     <main id="main-content">
-      <section class="schedule-page" aria-labelledby="schedule-title">
-        <div class="schedule-hero">
-          <div>
-            <p class="eyebrow">Event Timeline</p>
-            <h1 id="schedule-title">Festival Schedule</h1>
-            <p>Plan your festival itinerary, filter events by day, search sessions, and bookmark favorites to your local schedule.</p>
-          </div>
-          <div class="schedule-highlights" aria-label="At a glance">
-            <div>
-              <strong>3 Days</strong>
-              <span>of nonstop energy</span>
+
+        <!-- 1. Schedule Hero Section Box -->
+        <section class="section-box schedule-hero" aria-labelledby="schedule-title">
+            <div class="schedule-hero-header">
+                <span class="eyebrow">✨ Event Timeline</span>
+                <h1 id="schedule-title">Festival <span class="gradient-text">Schedule</span></h1>
+                <p>Plan your festival itinerary, filter events by day, search sessions, and bookmark favorites to your local schedule.</p>
             </div>
-            <div>
-              <strong>12+ Live Sessions</strong>
-              <span>from workshops to concerts</span>
+
+            <div class="schedule-highlights-grid" aria-label="At a glance">
+                <div class="schedule-stat-box">
+                    <strong>3 Days</strong>
+                    <span>Nonstop Energy & Tech</span>
+                </div>
+                <div class="schedule-stat-box">
+                    <strong>12+ Sessions</strong>
+                    <span>Workshops & Concerts</span>
+                </div>
+                <div class="schedule-stat-box">
+                    <strong>4 Venues</strong>
+                    <span>Across Campus</span>
+                </div>
             </div>
-            <div>
-              <strong>4 Venues</strong>
-              <span>across campus</span>
+        </section>
+
+        <!-- 2. Controls & Filtering Section Box -->
+        <section class="section-box schedule-controls-box">
+            <div class="schedule-controls">
+                <div class="search-input-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input 
+                        type="search" 
+                        id="event-search" 
+                        placeholder="Search by title, speaker, or venue..." 
+                        aria-label="Search festival sessions"
+                    />
+                </div>
+
+                <div class="filter-chips" role="group" aria-label="Filter schedule by day">
+                    <button type="button" class="filter-chip active" data-filter="all">🌟 All Days</button>
+                    <button type="button" class="filter-chip" data-filter="day-1">📅 Day 1</button>
+                    <button type="button" class="filter-chip" data-filter="day-2">📅 Day 2</button>
+                    <button type="button" class="filter-chip" data-filter="day-3">📅 Day 3</button>
+                    <button type="button" class="filter-chip bookmark-chip" data-filter="bookmarks">
+                        ⭐ My Bookmarks (<span id="bookmark-count">0</span>)
+                    </button>
+                </div>
             </div>
-          </div>
-        </div>
+        </section>
 
-        <div class="schedule-controls">
-          <div class="search-wrapper">
-            <label class="sr-only" for="event-search">Search sessions</label>
-            <input type="search" id="event-search" placeholder="🔍 Search by title, speaker or venue..." />
-          </div>
+        <!-- 3. Pre-Rendered Schedule Grid Section Box -->
+        <section class="section-box">
+            <p class="empty-state" id="schedule-empty" hidden>No events match your current filter or search criteria.</p>
 
-          <div class="filter-chips" role="group" aria-label="Filter schedule by day">
-            <button type="button" class="filter-chip active" data-filter="all">All days</button>
-            <button type="button" class="filter-chip" data-filter="day-1">Day 1</button>
-            <button type="button" class="filter-chip" data-filter="day-2">Day 2</button>
-            <button type="button" class="filter-chip" data-filter="day-3">Day 3</button>
-            <button type="button" class="filter-chip bookmark-chip" data-filter="bookmarks">
-              ⭐ My Bookmarks (<span id="bookmark-count">0</span>)
-            </button>
-          </div>
-        </div>
+            <div id="schedule-grid" class="schedule-grid">
 
-        <!-- 1. Loading State -->
-        <div id="schedule-loading" class="data-state loading-state">
-          <div class="spinner" aria-label="Loading schedule"></div>
-          <p>Fetching live schedule data...</p>
-        </div>
+                <!-- DAY 1 CARD -->
+                <div class="schedule-day-card" data-day="day-1">
+                    <div class="day-header-bar">
+                        <span class="day-pill">DAY 1</span>
+                        <h2>Kickoff & Innovation</h2>
+                    </div>
+                    <div class="events-list">
+                        <div class="schedule-event" data-id="evt-101" data-search="inauguration ceremony main auditorium fest committee & special guests ceremony">
+                            <div class="schedule-event-header">
+                                <span class="schedule-time">⏰ 09:00 AM</span>
+                                <span class="venue-badge">Ceremony &bull; Main Auditorium</span>
+                            </div>
+                            <h3>Inauguration Ceremony</h3>
+                            <p class="speaker-text"><strong>Speaker:</strong> Fest Committee & Special Guests</p>
+                            <p class="event-desc">Welcome remarks, cultural performances, and the official opening of EventHub 2026.</p>
+                            <button type="button" class="bookmark-btn" data-id="evt-101">☆ Bookmark Session</button>
+                        </div>
 
-        <!-- 2. Error State -->
-        <div id="schedule-error" class="data-state error-state" hidden>
-          <div class="error-icon">⚠️</div>
-          <div class="error-details">
-            <h3>Unable to load festival schedule</h3>
-            <p id="schedule-error-msg">Network error occurred while retrieving schedule. Check your Wi-Fi or connection.</p>
-            <button type="button" id="retry-schedule-btn" class="cta-button">🔄 Retry Fetching Schedule</button>
-          </div>
-        </div>
+                        <div class="schedule-event" data-id="evt-102" data-search="innovation expo & tech showcase exhibition hall a student innovators & startups exhibition">
+                            <div class="schedule-event-header">
+                                <span class="schedule-time">⏰ 11:30 AM</span>
+                                <span class="venue-badge">Exhibition &bull; Exhibition Hall A</span>
+                            </div>
+                            <h3>Innovation Expo & Tech Showcase</h3>
+                            <p class="speaker-text"><strong>Speaker:</strong> Student Innovators & Startups</p>
+                            <p class="event-desc">Explore student projects, startup booths, interactive tech displays, and prototype demos.</p>
+                            <button type="button" class="bookmark-btn" data-id="evt-102">☆ Bookmark Session</button>
+                        </div>
 
-        <!-- Empty State message -->
-        <p class="empty-state" id="schedule-empty" hidden>No events match your current filter or search criteria.</p>
+                        <div class="schedule-event" data-id="evt-103" data-search="from idea to impact building a student startup seminar hall 1 sindhu j founder wellnest keynote">
+                            <div class="schedule-event-header">
+                                <span class="schedule-time">⏰ 02:00 PM</span>
+                                <span class="venue-badge">Keynote &bull; Seminar Hall 1</span>
+                            </div>
+                            <h3>From Idea to Impact – Building a Student Startup</h3>
+                            <p class="speaker-text"><strong>Speaker:</strong> Sindhu J (Founder, WellNest)</p>
+                            <p class="event-desc">Learn how to transform your campus project into a venture-backed startup.</p>
+                            <button type="button" class="bookmark-btn" data-id="evt-103">☆ Bookmark Session</button>
+                        </div>
 
-        <!-- 3. Dynamic Schedule Grid Container (Populated via JS fetch) -->
-        <div id="schedule-grid" class="schedule-grid" hidden></div>
-      </section>
+                        <div class="schedule-event" data-id="evt-104" data-search="opening night concert open air stage campus beats & guest bands concert">
+                            <div class="schedule-event-header">
+                                <span class="schedule-time">⏰ 07:00 PM</span>
+                                <span class="venue-badge">Concert &bull; Open Air Stage</span>
+                            </div>
+                            <h3>Opening Night Concert</h3>
+                            <p class="speaker-text"><strong>Speaker:</strong> Campus Beats & Guest Bands</p>
+                            <p class="event-desc">Kick off the fest with live music, DJ sets, and a spectacular campus celebration under the stars.</p>
+                            <button type="button" class="bookmark-btn" data-id="evt-104">☆ Bookmark Session</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DAY 2 CARD -->
+                <div class="schedule-day-card" data-day="day-2">
+                    <div class="day-header-bar">
+                        <span class="day-pill">DAY 2</span>
+                        <h2>Workshops & Culture</h2>
+                    </div>
+                    <div class="events-list">
+                        <div class="schedule-event" data-id="evt-201" data-search="design and ai workshop innovation lab shivani a cto wellnest workshop">
+                            <div class="schedule-event-header">
+                                <span class="schedule-time">⏰ 10:00 AM</span>
+                                <span class="venue-badge">Workshop &bull; Innovation Lab</span>
+                            </div>
+                            <h3>Design and AI Workshop</h3>
+                            <p class="speaker-text"><strong>Speaker:</strong> Shivani A (CTO, WellNest)</p>
+                            <p class="event-desc">A hands-on session on building smarter products with AI tools and modern design thinking.</p>
+                            <button type="button" class="bookmark-btn" data-id="evt-201">☆ Bookmark Session</button>
+                        </div>
+
+                        <div class="schedule-event" data-id="evt-202" data-search="panel discussion the future of work & ai conference room 2 industry mentors & alumni panel">
+                            <div class="schedule-event-header">
+                                <span class="schedule-time">⏰ 01:30 PM</span>
+                                <span class="venue-badge">Panel &bull; Conference Room 2</span>
+                            </div>
+                            <h3>Panel Discussion: The Future of Work & AI</h3>
+                            <p class="speaker-text"><strong>Speaker:</strong> Industry Mentors & Alumni</p>
+                            <p class="event-desc">Industry experts discuss emerging tech skills, remote collaboration, and career readiness.</p>
+                            <button type="button" class="bookmark-btn" data-id="evt-202">☆ Bookmark Session</button>
+                        </div>
+
+                        <div class="schedule-event" data-id="evt-203" data-search="ui/ux design challenge sprint design studio b design club mentors competition">
+                            <div class="schedule-event-header">
+                                <span class="schedule-time">⏰ 04:00 PM</span>
+                                <span class="venue-badge">Competition &bull; Design Studio B</span>
+                            </div>
+                            <h3>UI/UX Design Challenge Sprint</h3>
+                            <p class="speaker-text"><strong>Speaker:</strong> Design Club Mentors</p>
+                            <p class="event-desc">Rapid prototyping contest for student designers solving real campus accessibility challenges.</p>
+                            <button type="button" class="bookmark-btn" data-id="evt-203">☆ Bookmark Session</button>
+                        </div>
+
+                        <div class="schedule-event" data-id="evt-204" data-search="grand cultural night amphitheatre cultural society & performing arts culture">
+                            <div class="schedule-event-header">
+                                <span class="schedule-time">⏰ 08:00 PM</span>
+                                <span class="venue-badge">Culture &bull; Amphitheatre</span>
+                            </div>
+                            <h3>Grand Cultural Night</h3>
+                            <p class="speaker-text"><strong>Speaker:</strong> Cultural Society & Performing Arts</p>
+                            <p class="event-desc">Dance, drama, and music performances showcasing student talent from across colleges.</p>
+                            <button type="button" class="bookmark-btn" data-id="evt-204">☆ Bookmark Session</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DAY 3 CARD -->
+                <div class="schedule-day-card" data-day="day-3">
+                    <div class="day-header-bar">
+                        <span class="day-pill">DAY 3</span>
+                        <h2>Hackathon & Keynotes</h2>
+                    </div>
+                    <div class="events-list">
+                        <div class="schedule-event" data-id="evt-301" data-search="24-hour hackathon finale demos tech block hackathon finalist teams hackathon">
+                            <div class="schedule-event-header">
+                                <span class="schedule-time">⏰ 09:30 AM</span>
+                                <span class="venue-badge">Hackathon &bull; Tech Block</span>
+                            </div>
+                            <h3>24-Hour Hackathon Finale Demos</h3>
+                            <p class="speaker-text"><strong>Speaker:</strong> Hackathon Finalist Teams</p>
+                            <p class="event-desc">Top 10 finalist teams present their live software/hardware solutions to judges.</p>
+                            <button type="button" class="bookmark-btn" data-id="evt-301">☆ Bookmark Session</button>
+                        </div>
+
+                        <div class="schedule-event" data-id="evt-302" data-search="leading innovation with purpose main auditorium vismaya s m ceo wellnest keynote">
+                            <div class="schedule-event-header">
+                                <span class="schedule-time">⏰ 01:00 PM</span>
+                                <span class="venue-badge">Keynote &bull; Main Auditorium</span>
+                            </div>
+                            <h3>Leading Innovation with Purpose</h3>
+                            <p class="speaker-text"><strong>Speaker:</strong> Vismaya S M (CEO, WellNest)</p>
+                            <p class="event-desc">An inspiring talk on empathetic leadership and driving sustainable impact in tech.</p>
+                            <button type="button" class="bookmark-btn" data-id="evt-302">☆ Bookmark Session</button>
+                        </div>
+
+                        <div class="schedule-event" data-id="evt-303" data-search="awards and closing ceremony main auditorium fest organizing committee ceremony">
+                            <div class="schedule-event-header">
+                                <span class="schedule-time">⏰ 03:30 PM</span>
+                                <span class="venue-badge">Ceremony &bull; Main Auditorium</span>
+                            </div>
+                            <h3>Awards and Closing Ceremony</h3>
+                            <p class="speaker-text"><strong>Speaker:</strong> Fest Organizing Committee</p>
+                            <p class="event-desc">Recognize winners, award prize trophies, celebrate participants, and officially close the festival.</p>
+                            <button type="button" class="bookmark-btn" data-id="evt-303">☆ Bookmark Session</button>
+                        </div>
+
+                        <div class="schedule-event" data-id="evt-304" data-search="farewell sunset jam & acoustic night rooftop garden acoustic band & open mic concert">
+                            <div class="schedule-event-header">
+                                <span class="schedule-time">⏰ 06:30 PM</span>
+                                <span class="venue-badge">Concert &bull; Rooftop Garden</span>
+                            </div>
+                            <h3>Farewell Sunset Jam & Acoustic Night</h3>
+                            <p class="speaker-text"><strong>Speaker:</strong> Acoustic Band & Open Mic</p>
+                            <p class="event-desc">A relaxed evening of indie music, networking, coffee, and final memories with friends.</p>
+                            <button type="button" class="bookmark-btn" data-id="evt-304">☆ Bookmark Session</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
     <footer>
-      <h3>EventHub 2026</h3>
-      <p>&copy; 2026 EventHub. All rights reserved. Developed for ZyoraByte Internship.</p>
+        <div class="footer-content">
+            <h3>EventHub 2026</h3>
+            <p>Annual College Festival celebrating innovation, technology, and culture.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a> &bull;
+                <a href="schedule.html">Schedule</a> &bull;
+                <a href="speakers.html">Speakers</a> &bull;
+                <a href="register.html">Register</a>
+            </div>
+            <p class="copyright">&copy; 2026 EventHub. Built for ZyoraByte Frontend Internship.</p>
+        </div>
     </footer>
 
     <script src="js/script.js" defer></script>
-  </body>
+</body>
 </html>

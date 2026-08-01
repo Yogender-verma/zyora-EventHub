@@ -1,170 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EventHub | Annual College Fest 2026</title>
-    <meta
-      name="description"
-      content="EventHub is the annual college fest celebrating music, technology, culture, and innovation."
-    />
+    <meta name="description" content="EventHub is the annual college fest celebrating music, technology, culture, and innovation." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
-  </head>
-  <body data-page="home">
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+</head>
+<body data-page="home">
 
     <header>
-      <h1>EventHub</h1>
-      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav aria-label="Primary navigation">
-        <a href="home.html" class="active">Home</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="speakers.html">Speakers</a>
-        <a href="register.html">Register</a>
-      </nav>
+        <div class="brand">
+            <a href="index.html" class="logo-link">
+                <span class="logo-icon">🎉</span>
+                <h1>EventHub</h1>
+            </a>
+        </div>
+
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="index.html" class="active" aria-current="page">Home</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="speakers.html">Speakers</a>
+            <a href="register.html">Register</a>
+        </nav>
     </header>
 
     <main id="main-content">
-      <section class="hero" aria-labelledby="fest-title">
-        <div class="hero-header-content">
-          <span class="eyebrow">ZyoraByte College Fest 2026</span>
-          <h1 id="fest-title">EventHub 2026</h1>
-          <p class="tagline">Three days of innovation, music, creativity, and unforgettable campus energy.</p>
-          <p><strong>October 15–17, 2026</strong> &bull; Innovation Hall, City Campus, New Delhi</p>
-        </div>
 
-        <div class="hero-side">
-          <div class="countdown-card" aria-label="Fest Countdown Timer">
-            <h2>⏳ Festival Launch Countdown</h2>
-            <div id="countdown" data-target-date="2026-10-15T09:00:00" class="countdown-grid">
-              <div class="countdown-unit">
-                <span class="countdown-value" id="cd-days">00</span>
-                <span class="countdown-label">Days</span>
-              </div>
-              <div class="countdown-unit">
-                <span class="countdown-value" id="cd-hours">00</span>
-                <span class="countdown-label">Hours</span>
-              </div>
-              <div class="countdown-unit">
-                <span class="countdown-value" id="cd-mins">00</span>
-                <span class="countdown-label">Mins</span>
-              </div>
-              <div class="countdown-unit">
-                <span class="countdown-value" id="cd-secs">00</span>
-                <span class="countdown-label">Secs</span>
-              </div>
+        <!-- 1. Hero Section Box -->
+        <section class="hero section-box" aria-labelledby="fest-title">
+            <div class="hero-header-content">
+                <span class="eyebrow">✨ ZyoraByte College Fest 2026</span>
+                <h1 id="fest-title">EventHub <span class="gradient-text">2026</span></h1>
+                <p class="tagline">Three days of innovation, music, creativity, and unforgettable campus energy.</p>
+                <div class="event-details-pill">
+                    <span>📅 <strong>October 15–17, 2026</strong></span>
+                    <span>•</span>
+                    <span>📍 Google Office, Hyderabad</span>
+                </div>
             </div>
-          </div>
 
-          <div class="hero-stats">
-            <div class="stat-card">
-              <strong id="live-registration-count">0</strong>
-              <span>Registered Attendees</span>
+            <div class="hero-side">
+                <div class="countdown-card" aria-label="Fest Countdown Timer">
+                    <h3>⏳ Festival Launch Countdown</h3>
+                    <div id="countdown" data-target-date="2026-10-15T09:00:00" class="countdown-grid">
+                        <div class="countdown-unit">
+                            <span class="countdown-value" id="cd-days">00</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-unit">
+                            <span class="countdown-value" id="cd-hours">00</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-unit">
+                            <span class="countdown-value" id="cd-mins">00</span>
+                            <span class="countdown-label">Mins</span>
+                        </div>
+                        <div class="countdown-unit">
+                            <span class="countdown-value" id="cd-secs">00</span>
+                            <span class="countdown-label">Secs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <strong id="live-registration-count">420</strong>
+                        <span>Registered Attendees</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>14+</strong>
+                        <span>Live Sessions</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>4</strong>
+                        <span>Campus Venues</span>
+                    </div>
+                </div>
             </div>
-            <div class="stat-card">
-              <strong>14+</strong>
-              <span>Live Sessions</span>
+
+            <div class="hero-cta-wrapper">
+                <a href="register.html" class="cta-button">🚀 Register Now</a>
+                <a href="schedule.html" class="cta-button secondary-button">📅 View Schedule</a>
             </div>
-            <div class="stat-card">
-              <strong>4</strong>
-              <span>Campus Venues</span>
+        </section>
+
+        <!-- 2. Live Updates & Announcements Section Box -->
+        <section class="section-box live-data-section" aria-labelledby="live-updates-title">
+            <div class="section-header-box">
+                <div class="header-title-group">
+                    <span class="header-icon-badge">🔴</span>
+                    <div>
+                        <h2 id="live-updates-title">Live Updates & Announcements</h2>
+                        <p>Real-time feed fetched dynamically from festival servers.</p>
+                    </div>
+                </div>
+                <button type="button" id="refresh-announcements-btn" class="secondary-button icon-btn" title="Refresh Live Data">
+                    🔄 Refresh Feed
+                </button>
             </div>
-          </div>
-        </div>
 
-        <p class="hero-cta-wrapper">
-          <a href="register.html" class="cta-button">🚀 Register Now</a>
-          <a href="schedule.html" class="cta-button secondary-button">📅 View Schedule</a>
-        </p>
-      </section>
+            <div id="announcements-feed" class="card-grid">
+                <article class="announcement-card feature-card">
+                    <div class="announcement-header">
+                        <span class="pill urgent-pill">🔥 URGENT</span>
+                        <small class="announcement-time">⏱️ 10 mins ago</small>
+                    </div>
+                    <h3>🎉 Hackathon Registration Extended!</h3>
+                    <p>Due to overwhelming demand, registration for the 24-Hour AI Hackathon has been extended to Oct 12th. Form your teams now!</p>
+                </article>
 
-      <!-- Live Announcements Section (Data layer via fetch with loading, success & error states) -->
-      <section aria-labelledby="live-updates-title" class="live-data-section">
-        <div class="section-heading">
-          <div>
-            <h2 id="live-updates-title">🔴 Live Updates & Announcements</h2>
-            <p>Real-time feed fetched dynamically from festival servers.</p>
-          </div>
-          <button type="button" id="refresh-announcements-btn" class="secondary-button icon-btn" title="Refresh Live Data">
-            🔄 Refresh Feed
-          </button>
-        </div>
+                <article class="announcement-card feature-card">
+                    <div class="announcement-header">
+                        <span class="pill new-pill">🎵 NEW</span>
+                        <small class="announcement-time">⏱️ 1 hour ago</small>
+                    </div>
+                    <h3>🎵 Keynote Speaker & Concert Lineup Revealed</h3>
+                    <p>We are thrilled to announce our celebrity musical guest for the Day 1 Opening Night Concert! Check out the schedule page.</p>
+                </article>
 
-        <!-- 1. Loading State -->
-        <div id="announcements-loading" class="data-state loading-state">
-          <div class="spinner" aria-label="Loading updates"></div>
-          <p>Fetching live updates...</p>
-        </div>
+                <article class="announcement-card feature-card">
+                    <div class="announcement-header">
+                        <span class="pill info-pill">ℹ️ INFO</span>
+                        <small class="announcement-time">⏱️ 3 hours ago</small>
+                    </div>
+                    <h3>🤖 Workshop Seats Allocation Update</h3>
+                    <p>Hands-on seats for the Design & AI Workshop in Innovation Lab are filling up fast. Registered participants get priority entry.</p>
+                </article>
+            </div>
+        </section>
 
-        <!-- 2. Error State -->
-        <div id="announcements-error" class="data-state error-state" hidden>
-          <div class="error-icon">⚠️</div>
-          <div class="error-details">
-            <h3>Failed to load live announcements</h3>
-            <p id="announcements-error-msg">Could not reach the server. Please verify your connection.</p>
-            <button type="button" id="retry-announcements-btn" class="cta-button">🔄 Retry Connection</button>
-          </div>
-        </div>
+        <!-- 3. About the Fest Section Box -->
+        <section class="section-box about-section-box" aria-labelledby="about-title">
+            <div class="section-header-box">
+                <div class="header-title-group">
+                    <span class="header-icon-badge">🌟</span>
+                    <div>
+                        <h2 id="about-title">About the Fest</h2>
+                        <p>Celebrating student talent, groundbreaking tech, and vibrant culture.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-card-body">
+                <p>
+                    <strong>EventHub</strong> brings together students, creators, developers, and industry leaders for a 
+                    vibrant three-day festival of innovation and collaboration. From high-octane hackathons to inspiring keynotes 
+                    and live acoustic concerts, the fest offers unforgettable experiences for every campus mind.
+                </p>
+                <div class="about-highlights-pills">
+                    <span class="highlight-pill">⚡ 24-Hour AI Hackathon</span>
+                    <span class="highlight-pill">🎤 Founder Keynotes</span>
+                    <span class="highlight-pill">🎵 Live Night Concerts</span>
+                    <span class="highlight-pill">🏆 Rs. 2,00,000+ Prize Pool</span>
+                </div>
+            </div>
+        </section>
 
-        <!-- 3. Success State (Dynamically Populated) -->
-        <div id="announcements-feed" class="card-grid" hidden></div>
-      </section>
+        <!-- 4. Festival Highlights Section Box -->
+        <section class="section-box highlights-section-box" aria-labelledby="highlights-title">
+            <div class="section-header-box">
+                <div class="header-title-group">
+                    <span class="header-icon-badge">🎯</span>
+                    <div>
+                        <h2 id="highlights-title">Festival Highlights</h2>
+                        <p>Explore the flagship tracks and interactive experiences at EventHub 2026.</p>
+                    </div>
+                </div>
+            </div>
 
-      <section aria-labelledby="about-title">
-        <h2 id="about-title">About the Fest</h2>
-        <p>
-          EventHub brings together students, creators, and industry leaders for a vibrant celebration of
-          technology, culture, and collaboration. From inspiring talks to high-energy performances, the
-          fest offers something for every curious mind.
-        </p>
-      </section>
+            <div class="card-grid highlights-grid">
+                <article class="feature-card highlight-card">
+                    <div class="card-icon-header">🎤</div>
+                    <h3>Tech Talks & Keynotes</h3>
+                    <p>Hear from startup founders, designers, and CTOs sharing practical insights, career stories, and real-world tech strategies.</p>
+                    <a href="speakers.html" class="card-link">Explore Speakers &rarr;</a>
+                </article>
 
-      <section aria-labelledby="highlights-title">
-        <h2 id="highlights-title">Festival Highlights</h2>
-        <div class="card-grid">
-          <article class="feature-card">
-            <h3>🎤 Tech Talks & Keynotes</h3>
-            <p>Hear from startup founders, designers, and CTOs sharing practical insights and real-world stories.</p>
-          </article>
-          <article class="feature-card">
-            <h3>🎵 Live Concerts & Performances</h3>
-            <p>Enjoy music nights, dance showcases, and acoustic sunset sessions under the campus lights.</p>
-          </article>
-          <article class="feature-card">
-            <h3>⚡ Hands-on Workshops</h3>
-            <p>Join interactive sessions on Generative AI, UI/UX Design Sprints, and entrepreneurship.</p>
-          </article>
-        </div>
-      </section>
+                <article class="feature-card highlight-card">
+                    <div class="card-icon-header">🎵</div>
+                    <h3>Live Concerts & Performances</h3>
+                    <p>Enjoy music nights, battle of the bands, dance showcases, and acoustic sunset sessions under the campus lights.</p>
+                    <a href="schedule.html" class="card-link">View Concert Lineup &rarr;</a>
+                </article>
 
-      <section aria-labelledby="partners-title">
-        <h2 id="partners-title">Sponsors and Partners</h2>
-        <ul class="partners-list">
-          <li>TechNova Labs</li>
-          <li>BluePeak Media</li>
-          <li>CampusConnect</li>
-          <li>GreenSpark Energy</li>
-        </ul>
-      </section>
+                <article class="feature-card highlight-card">
+                    <div class="card-icon-header">⚡</div>
+                    <h3>Hands-on Workshops</h3>
+                    <p>Join interactive masterclasses on Generative AI, UI/UX Design Sprints, product prototyping, and entrepreneurship.</p>
+                    <a href="register.html" class="card-link">Reserve Your Seat &rarr;</a>
+                </article>
+            </div>
+        </section>
 
-      <section aria-labelledby="contact-title">
-        <h2 id="contact-title">Contact</h2>
-        <p>Email: <strong>hello@eventhubfest.com</strong></p>
-        <p>Phone: <strong>+91 98765 43210</strong></p>
-        <p>Campus Office, Block C, Student Activity Center, New Delhi</p>
-      </section>
+        <!-- 5. Sponsors and Partners Section Box -->
+        <section class="section-box partners-section-box" aria-labelledby="partners-title">
+            <div class="section-header-box">
+                <div class="header-title-group">
+                    <span class="header-icon-badge">🤝</span>
+                    <div>
+                        <h2 id="partners-title">Sponsors & Partners</h2>
+                        <p>Powered by visionary tech enterprises and campus partners.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sponsor-grid">
+                <div class="sponsor-badge">
+                    <span class="sponsor-icon">🚀</span>
+                    <strong>TechNova Labs</strong>
+                    <span class="sponsor-type">Title Sponsor</span>
+                </div>
+                <div class="sponsor-badge">
+                    <span class="sponsor-icon">🌐</span>
+                    <strong>BluePeak Media</strong>
+                    <span class="sponsor-type">Media Partner</span>
+                </div>
+                <div class="sponsor-badge">
+                    <span class="sponsor-icon">📱</span>
+                    <strong>CampusConnect</strong>
+                    <span class="sponsor-type">Community Partner</span>
+                </div>
+                <div class="sponsor-badge">
+                    <span class="sponsor-icon">⚡</span>
+                    <strong>GreenSpark Energy</strong>
+                    <span class="sponsor-type">Eco Partner</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Contact Section Box -->
+        <section class="section-box contact-section-box" aria-labelledby="contact-title">
+            <div class="section-header-box">
+                <div class="header-title-group">
+                    <span class="header-icon-badge">📞</span>
+                    <div>
+                        <h2 id="contact-title">Contact & Help Desk</h2>
+                        <p>Have questions? Get in touch with our festival organizing team.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <h4>Email Us</h4>
+                    <p>hello@eventhubfest.com</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📞</div>
+                    <h4>Call Support</h4>
+                    <p>+91 98765 43210</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h4>Campus Office</h4>
+                    <p>Google Office, Gachibowli, Hyderabad</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer>
-      <h3>EventHub 2026</h3>
-      <p>&copy; 2026 EventHub. All rights reserved. Developed for ZyoraByte Internship.</p>
+        <div class="footer-content">
+            <h3>EventHub 2026</h3>
+            <p>Annual College Festival celebrating innovation, technology, and culture.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a> &bull;
+                <a href="schedule.html">Schedule</a> &bull;
+                <a href="speakers.html">Speakers</a> &bull;
+                <a href="register.html">Register</a>
+            </div>
+            <p class="copyright">&copy; 2026 EventHub. Built for ZyoraByte Frontend Internship.</p>
+        </div>
     </footer>
 
     <script src="js/script.js" defer></script>
-  </body>
+</body>
 </html>

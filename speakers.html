@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EventHub | Speakers</title>
+    <meta name="description" content="Meet the inspiring student leaders behind WellNest at EventHub 2026.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-  
 </head>
-<body>
-
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+<body data-page="speakers">
 
     <header>
-        <h1>EventHub</h1>
+        <div class="brand">
+            <a href="index.html" class="logo-link">
+                <span class="logo-icon">🎉</span>
+                <h1>EventHub</h1>
+            </a>
+        </div>
 
         <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
             <span></span>
@@ -22,100 +28,145 @@
         </button>
 
         <nav class="nav-links" aria-label="Primary navigation">
-            <a href="home.html">Home</a>
+            <a href="index.html">Home</a>
             <a href="schedule.html">Schedule</a>
-            <a href="speakers.html" class="active">Speakers</a>
+            <a href="speakers.html" class="active" aria-current="page">Speakers</a>
             <a href="register.html">Register</a>
         </nav>
     </header>
 
     <main id="main-content">
 
-        <section>
-            <h2>Meet Our Guest Speakers</h2>
+        <!-- Speakers Header Box -->
+        <section class="section-box speakers-hero">
+            <div class="section-header-box" style="border-bottom: none; margin-bottom: 0; padding-bottom: 0;">
+                <div class="header-title-group">
+                    <span class="header-icon-badge">🎤</span>
+                    <div>
+                        <h2>Meet Our Guest Speakers</h2>
+                        <p>
+                            Meet the inspiring student leaders behind <strong>WellNest</strong>, a startup dedicated to
+                            improving student mental well-being through technology and innovation.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
-            <p>
-                Meet the inspiring student leaders behind WellNest, a startup dedicated to
-                improving student mental well-being through technology and innovation.
-            </p>
-
-            <input type="search" id="speakerSearch" placeholder="Search speakers or sessions" aria-label="Search speakers" />
+            <div class="search-input-wrapper" style="margin-top: 1.2rem; max-width: 100%;">
+                <span class="search-icon">🔍</span>
+                <input 
+                    type="search" 
+                    id="speakerSearch" 
+                    placeholder="Search speakers or sessions" 
+                    aria-label="Search speakers"
+                />
+            </div>
         </section>
 
-        <section id="speakerList">
+        <!-- Speakers Grid Section -->
+        <section class="section-box">
+            <div id="speakerList" class="speakers-grid">
 
-            <article class="speaker-card" data-search="Sindhu J From Idea to Impact Building a Student Startup">
-                <img src="./assets/images/Sindhu.jpeg" alt="Sindhu J" loading="lazy" decoding="async" height="450" width="400">
+                <article class="speaker-card" data-search="sindhu j founder wellnest from idea to impact building a student startup">
+                    <div class="speaker-image-container">
+                        <img 
+                            src="assets/images/Sindhu.jpeg" 
+                            alt="Sindhu J" 
+                            loading="lazy" 
+                            decoding="async"
+                            height="450" 
+                            width="400"
+                            onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 400 300\' width=\'100%\' height=\'100%\'><rect width=\'400\' height=\'300\' fill=\'%233B82F6\'/><text x=\'50%\' y=\'54%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23FFFFFF\' font-size=\'48\' font-weight=\'700\'>Sindhu J</text></svg>';"
+                        />
+                        <button type="button" class="favorite-toggle-btn" aria-label="Toggle Favorite Speaker" title="Favorite Speaker">☆</button>
+                    </div>
 
-                <h3>Sindhu J</h3>
+                    <h3>Sindhu J</h3>
+                    <p class="speaker-role"><strong>Founder, WellNest</strong></p>
+                    <p class="speaker-session">
+                        <strong>Session:</strong> From Idea to Impact – Building a Student Startup
+                    </p>
+                </article>
 
-                <p><strong>Founder, WellNest</strong></p>
+                <article class="speaker-card" data-search="athira co-founder wellnest turning student challenges into real solutions">
+                    <div class="speaker-image-container">
+                        <img 
+                            src="assets/images/Athira.jpeg" 
+                            alt="Athira" 
+                            loading="lazy" 
+                            decoding="async"
+                            height="450" 
+                            width="400"
+                            onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 400 300\' width=\'100%\' height=\'100%\'><rect width=\'400\' height=\'300\' fill=\'%238B5CF6\'/><text x=\'50%\' y=\'54%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23FFFFFF\' font-size=\'48\' font-weight=\'700\'>Athira</text></svg>';"
+                        />
+                        <button type="button" class="favorite-toggle-btn" aria-label="Toggle Favorite Speaker" title="Favorite Speaker">☆</button>
+                    </div>
 
-                <p>
-                    <strong>Session:</strong> From Idea to Impact – Building a Student Startup
-                </p>
-            </article>
+                    <h3>Athira</h3>
+                    <p class="speaker-role"><strong>Co-Founder, WellNest</strong></p>
+                    <p class="speaker-session">
+                        <strong>Session:</strong> Turning Student Challenges into Real Solutions
+                    </p>
+                </article>
 
-            <hr>
+                <article class="speaker-card" data-search="vismaya s m chief executive officer ceo wellnest leading innovation with purpose">
+                    <div class="speaker-image-container">
+                        <img 
+                            src="assets/images/Vismaya.jpeg" 
+                            alt="Vismaya S M" 
+                            loading="lazy" 
+                            decoding="async"
+                            height="400" 
+                            width="400"
+                            onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 400 300\' width=\'100%\' height=\'100%\'><rect width=\'400\' height=\'300\' fill=\'%2306B6D4\'/><text x=\'50%\' y=\'54%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23FFFFFF\' font-size=\'48\' font-weight=\'700\'>Vismaya S M</text></svg>';"
+                        />
+                        <button type="button" class="favorite-toggle-btn" aria-label="Toggle Favorite Speaker" title="Favorite Speaker">☆</button>
+                    </div>
 
-            <article class="speaker-card" data-search="Athira Turning Student Challenges into Real Solutions">
-                <img src="./assets/images/Athira.jpeg" alt="Athira" loading="lazy" decoding="async" height="450" width="400">
+                    <h3>Vismaya S M</h3>
+                    <p class="speaker-role"><strong>Chief Executive Officer (CEO), WellNest</strong></p>
+                    <p class="speaker-session">
+                        <strong>Session:</strong> Leading Innovation with Purpose
+                    </p>
+                </article>
 
-                <h3>Athira</h3>
+                <article class="speaker-card" data-search="shivani a chief technology officer cto wellnest building ai solutions for student mental well-being">
+                    <div class="speaker-image-container">
+                        <img 
+                            src="assets/images/Shivani.jpeg" 
+                            alt="Shivani A" 
+                            loading="lazy" 
+                            decoding="async"
+                            height="450" 
+                            width="400"
+                            onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 400 300\' width=\'100%\' height=\'100%\'><rect width=\'400\' height=\'300\' fill=\'%233B82F6\'/><text x=\'50%\' y=\'54%\' dominant-baseline=\'middle\' text-anchor=\'middle\' fill=\'%23FFFFFF\' font-size=\'48\' font-weight=\'700\'>Shivani A</text></svg>';"
+                        />
+                        <button type="button" class="favorite-toggle-btn" aria-label="Toggle Favorite Speaker" title="Favorite Speaker">☆</button>
+                    </div>
 
-                <p><strong>Co-Founder, WellNest</strong></p>
+                    <h3>Shivani A</h3>
+                    <p class="speaker-role"><strong>Chief Technology Officer (CTO), WellNest</strong></p>
+                    <p class="speaker-session">
+                        <strong>Session:</strong> Building AI Solutions for Student Mental Well-being
+                    </p>
+                </article>
 
-                <p>
-                    <strong>Session:</strong> Turning Student Challenges into Real Solutions
-                </p>
-            </article>
-
-            <hr>
-
-            <article class="speaker-card" data-search="Vismaya S M Leading Innovation with Purpose">
-                <img src="./assets/images/Vismaya.jpeg" alt="Vismaya S M" loading="lazy" decoding="async" height="400" width="400">
-
-                <h3>Vismaya S M</h3>
-
-                <p><strong>Chief Executive Officer (CEO), WellNest</strong></p>
-
-                <p>
-                    <strong>Session:</strong> Leading Innovation with Purpose
-                </p>
-            </article>
-
-
-
-            <article class="speaker-card" data-search="Shivani A Building AI Solutions for Student Mental Well-being">
-                <img src="./assets/images/Shivani.jpeg" alt="Shivani A" loading="lazy" decoding="async" height="450" width="400">
-
-                <h3>Shivani A</h3>
-
-                <p><strong>Chief Technology Officer (CTO), WellNest</strong></p>
-
-                <p>
-                    <strong>Session:</strong> Building AI Solutions for Student Mental Well-being
-                </p>
-            </article>
-
+            </div>
         </section>
 
     </main>
 
     <footer>
-
-        <h3>EventHub</h3>
-
-        <p>Email: hello@eventhubfest.com</p>
-
-        <p>Instagram | LinkedIn | YouTube</p>
-
-        <p>&copy; 2026 EventHub. All Rights Reserved.</p>
-
+        <div class="footer-content">
+            <h3>EventHub</h3>
+            <p>Email: hello@eventhubfest.com</p>
+            <p>Instagram | LinkedIn | YouTube</p>
+            <p class="copyright">&copy; 2026 EventHub. All Rights Reserved.</p>
+        </div>
     </footer>
 
-<script src="js/script.js" defer></script>
-<script src="js/speakers.js"></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/speakers.js" defer></script>
 
 </body>
 </html>

@@ -3,132 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EventHub | Register</title>
+    <title>EventHub | Register for Fest 2026</title>
+    <meta name="description" content="Register now for EventHub 2026. Reserve your entry pass for hackathons, workshops, keynotes, and concerts.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body>
+<body data-page="register">
 
-<a class="skip-link" href="#main-content">Skip to main content</a>
+    <header>
+        <div class="brand">
+            <a href="index.html" class="logo-link">
+                <span class="logo-icon">🎉</span>
+                <h1>EventHub</h1>
+            </a>
+        </div>
 
-<header>
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-    <h1>EventHub</h1>
+        <nav class="nav-links" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="schedule.html">Schedule</a>
+            <a href="speakers.html">Speakers</a>
+            <a href="register.html" class="active" aria-current="page">Register</a>
+        </nav>
+    </header>
 
-    <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+    <main id="main-content">
 
-    <nav class="nav-links" aria-label="Primary navigation">
-        <a href="home.html">Home</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="speakers.html">Speakers</a>
-        <a href="register.html" class="active">Register</a>
-    </nav>
+        <!-- 1. Hero Banner Box -->
+        <section class="section-box register-hero">
+            <div class="register-hero-content">
+                <span class="eyebrow">✨ Event Registration 2026</span>
+                <h2>Register for EventHub <span class="gradient-text">2026</span></h2>
+                <p>
+                    Fill out the registration form below and reserve your entry pass for the 
+                    biggest college festival of the year.
+                </p>
+                <div class="register-benefits-pills">
+                    <span class="benefit-pill">🎟️ Free Festival Pass</span>
+                    <span class="benefit-pill">⚡ Priority Workshop Entry</span>
+                    <span class="benefit-pill">📜 Official Certificate</span>
+                </div>
+            </div>
+        </section>
 
-</header>
+        <!-- 2. Registration Form Box -->
+        <section class="section-box form-card-section">
+            <div class="section-header-box">
+                <div class="header-title-group">
+                    <span class="header-icon-badge">📝</span>
+                    <div>
+                        <h2>Attendee Details & Preference</h2>
+                        <p>All fields marked with an asterisk (*) are required.</p>
+                    </div>
+                </div>
+            </div>
 
-<main id="main-content">
+            <form class="validate-form" novalidate>
+                
+                <div class="form-grid">
+                    
+                    <!-- Field 1: Full Name -->
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" placeholder="e.g. Alex Sharma" required>
+                    </div>
 
-<section>
+                    <!-- Field 2: Email Address -->
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" placeholder="e.g. alex@example.com" required>
+                    </div>
 
-    <h2>Register for EventHub 2026</h2>
+                    <!-- Field 3: Phone Number -->
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" placeholder="10-digit mobile number" required>
+                    </div>
 
-    <p>
-        Fill out the registration form below and reserve your place for the
-        biggest college fest of the year.
-    </p>
+                    <!-- Field 4: College Name -->
+                    <div class="form-group">
+                        <label for="college">College Name *</label>
+                        <input type="text" id="college" placeholder="e.g. City Engineering College" required>
+                    </div>
 
-</section>
+                    <!-- Field 5: Department -->
+                    <div class="form-group">
+                        <label for="department">Department *</label>
+                        <input type="text" id="department" placeholder="e.g. Computer Science" required>
+                    </div>
 
-<section>
+                    <!-- Field 6: Year of Study -->
+                    <div class="form-group">
+                        <label for="year">Year of Study *</label>
+                        <select id="year">
+                            <option>Select Year</option>
+                            <option>First Year</option>
+                            <option>Second Year</option>
+                            <option>Third Year</option>
+                            <option>Final Year</option>
+                        </select>
+                    </div>
 
-<section class="form-card">
+                </div>
 
-<form class="validate-form" novalidate>
+                <!-- Field 7: Choose an Event -->
+                <div class="form-group full-width-group">
+                    <label for="event">Choose Featured Track / Event *</label>
+                    <select id="event">
+                        <option>Select an Event</option>
+                        <option>Hackathon (24-Hour AI Challenge)</option>
+                        <option>Web Development Workshop</option>
+                        <option>AI & Design Workshop</option>
+                        <option>UI/UX Design Challenge Sprint</option>
+                        <option>Gaming Tournament</option>
+                        <option>Project Expo & Startup Showcase</option>
+                        <option>Grand Cultural Night & Concerts</option>
+                    </select>
+                </div>
 
-<label for="name">Full Name</label><br>
-<input type="text" id="name" required><br><br>
+                <!-- Field 8: Message -->
+                <div class="form-group full-width-group">
+                    <label for="message">Why do you want to participate? (Optional)</label>
+                    <textarea id="message" rows="4" placeholder="Tell us briefly about your interest or team..."></textarea>
+                </div>
 
-<label for="email">Email Address</label><br>
-<input type="email" id="email" required><br><br>
+                <!-- Terms Checkbox -->
+                <div class="form-terms-box">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">
+                        I agree to the event rules, code of conduct, and terms of participation.
+                    </label>
+                </div>
 
-<label for="phone">Phone Number</label><br>
-<input type="tel" id="phone" required><br><br>
+                <!-- Submit Button -->
+                <div class="form-submit-wrapper">
+                    <button type="submit" class="cta-button submit-btn">
+                        🚀 Complete Registration
+                    </button>
+                </div>
 
-<label for="college">College Name</label><br>
-<input type="text" id="college" required><br><br>
+            </form>
+        </section>
 
-<label for="department">Department</label><br>
-<input type="text" id="department" required><br><br>
+    </main>
 
-<label for="year">Year of Study</label><br>
+    <footer>
+        <div class="footer-content">
+            <h3>EventHub 2026</h3>
+            <p>Annual College Festival celebrating innovation, technology, and culture.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a> &bull;
+                <a href="schedule.html">Schedule</a> &bull;
+                <a href="speakers.html">Speakers</a> &bull;
+                <a href="register.html">Register</a>
+            </div>
+            <p class="copyright">&copy; 2026 EventHub. Built for ZyoraByte Frontend Internship.</p>
+        </div>
+    </footer>
 
-<select id="year">
-    <option>Select Year</option>
-    <option>First Year</option>
-    <option>Second Year</option>
-    <option>Third Year</option>
-    <option>Final Year</option>
-</select>
-
-<br><br>
-
-<label for="event">Choose an Event</label><br>
-
-<select id="event">
-
-<option>Select an Event</option>
-
-<option>Hackathon</option>
-<option>Web Development Workshop</option>
-<option>AI Workshop</option>
-<option>UI/UX Design Challenge</option>
-<option>Gaming Tournament</option>
-<option>Project Expo</option>
-<option>Cultural Night</option>
-
-</select>
-
-<br><br>
-
-<label for="message">Why do you want to participate?</label><br>
-
-<textarea id="message" rows="5" cols="40"></textarea>
-
-<br><br>
-
-<input type="checkbox" id="terms">
-
-<label for="terms">
-I agree to the event rules and code of conduct.
-</label>
-
-<br><br>
-
-<button type="submit">Register Now</button>
-
-</form>
-
-</section>
-</section>
-
-</main>
-
-<footer>
-
-<p>EventHub 2026</p>
-
-<p>Email: hello@eventhubfest.com</p>
-
-<p>Instagram | LinkedIn | YouTube</p>
-
-<p>&copy; 2026 EventHub. All Rights Reserved.</p>
-
-</footer>
-
-<script src="js/register.js" defer></script>
+    <script src="js/register.js" defer></script>
 </body>
 </html>
