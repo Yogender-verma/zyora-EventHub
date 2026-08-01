@@ -2,57 +2,36 @@
 
 A modern, responsive, and data-driven college festival website built for the **ZyoraByte Frontend Internship**.
 
+---
+
 ## 📌 Project Overview
 
-EventHub is an interactive web application for an annual college festival. It gives students and attendees a complete digital experience to explore live announcements, search festival schedules, bookmark sessions, discover guest speakers, and register for events.
+**EventHub 2026** is an interactive web application for an annual college festival hosted at **Google Office, Hyderabad**. It gives students, creators, and attendees a complete digital experience to explore live announcements, search festival schedules, bookmark sessions, discover guest speakers from **WellNest**, and register for events.
 
 ---
 
-## 🚀 Key Features & Development Progress (Build Day 5)
+## 🚀 Key Features & Development Highlights
 
-### 1. 🌐 Live Data Layer (`fetch()` API)
-- **Home Page Live Announcements**: Dynamically fetches the latest festival updates and news feed from `./assets/data/announcements.json`.
-- **Schedule Live Events**: Dynamically fetches all 3 days of festival events from `./assets/data/schedule.json`.
-- **Robust 3-State Handling**:
-  - ⏳ **Loading State**: Animated spinner and loading feedback while fetching data.
-  - ✅ **Success State**: Renders rich interactive cards for announcements and schedule sessions.
-  - ⚠️ **Error State**: Displays clear offline / network failure warnings with a **"🔄 Retry"** button (wifi off test compliant).
+### 1. 🌐 Live & Fail-Safe Data Layer
+- **Home Page Announcements**: Dynamically fetches festival updates from `./assets/data/announcements.json` with embedded offline fallback.
+- **Schedule Live Events**: Dynamically fetches 3 days of festival events from `./assets/data/schedule.json`.
+- **Speakers Profiles**: Dynamically fetches guest speaker profiles from `./assets/data/speakers.json` with SVG avatar fallbacks (`onerror`).
+- **Fail-Safe 3-State Architecture**:
+  - ⏳ **Loading State**: Animated spinner during initial data fetch.
+  - ✅ **Success State**: Renders rich interactive cards for announcements, schedule sessions, and speakers.
+  - 🛡️ **Offline & `file://` Fallback**: Zero-failure fallback layer ensuring the app renders 100% reliably even when opened directly via local file explorer or offline mode.
 
-### 2. 💾 Data Persistence (`localStorage`)
-- **Bookmarked Schedule Sessions**: Users can bookmark sessions (⭐ Bookmark). Bookmarked items persist across refreshes under `eventhub-bookmarked-sessions`.
-- **"⭐ My Bookmarks" Filter**: Dedicated schedule filter showing user's saved festival itinerary.
-- **Form Registrations**: Registrations submitted on `register.html` are saved locally under `eventhub-registrations` and dynamically update the live attendee counter on the home page.
-- **Speaker Favorites & Theme Settings**: Persisted in `localStorage`.
+### 2. 🎨 Dark Glassmorphism Design System
+- **Section Box Architecture**: Every page section is enclosed in a frosted glass box (`backdrop-filter: blur(18px)`) with glowing borders and icon headers.
+- **Full-Width Schedule Timeline**: Spacious horizontal timeline cards with time badges, category tags, and bookmark toggles.
+- **Responsive Speaker Grid**: 4-column grid layout for guest speakers with rectangular photo containers, role badges, and favorite toggles.
+- **Registration Form**: 2-column responsive form grid with real-time field validation, benefit pills, and localStorage registration persistence.
 
-### 3. 📱 Mid-Project Quality & Checklist
-- **Fully Responsive**: Optimized for Mobile, Tablet, and Desktop using CSS Grid, Flexbox, and Media Queries.
-- **Form Validation**: Real-time accessible field validation for `register.html`.
-- **Consistent UI**: Unified color system, smooth micro-animations, glassmorphism headers, and keyboard accessibility.
-
----
-
-## 👥 Team Responsibilities
-
-### Shivani
-- Home Page Structure & Hero Section
-- Festival Launch Countdown Timer
-- Schedule Page Layout & Day Filters
-
-### Yogender Verma
-- **Home & Schedule Data Layer** (`fetch()` integration with loading, success & error states)
-- **Data Persistence** (`localStorage` for schedule bookmarks, attendee stats, theme & registrations)
-- Speaker Cards & Search Filter
-- Registration Form Validation & Error Handling
-- Mid-Project Checkpoint & Documentation
-
----
-
-## 🛠️ Tech Stack
-
-- **Frontend**: HTML5, Vanilla CSS3 (Custom Properties & Animations), Vanilla JavaScript (ES6+)
-- **Data & APIs**: Fetch API, Async/Await, JSON Data Store
-- **Persistence**: Web Storage API (`localStorage`)
-- **Version Control**: Git & GitHub
+### 3. 💾 Data Persistence (`localStorage`)
+- **Bookmarked Sessions**: Saved locally under `eventhub-bookmarked-sessions`.
+- **"⭐ My Bookmarks" Filter**: Dedicated schedule filter showing saved festival itinerary.
+- **Speaker Favorites**: Saved under `eventhub-favorites`.
+- **Live Registrations**: Saved under `eventhub-registrations`, dynamically updating the live attendee counter (420+).
 
 ---
 
@@ -60,35 +39,61 @@ EventHub is an interactive web application for an annual college festival. It gi
 
 ```
 zyora-EventHub/
-│── index.html / home.html    # Home Page with Live Announcements & Countdown
-│── schedule.html             # Live Schedule Page with Search & Bookmarks
-│── speakers.html             # Guest Speakers Page
-│── register.html             # Event Registration Form with Validation
+│── index.html / home.html    # Home Page with Section Boxes, Countdown & Live Feed
+│── schedule.html             # Full-Width Timeline Schedule with Search & Bookmarks
+│── speakers.html             # Guest Speakers Page with Favorite Toggles & Search
+│── register.html             # Grid Event Registration Form with Validation
 │── css/
-│   ├── style.css             # Design System, Components & State Styles
+│   ├── style.css             # Glassmorphism Design System & Responsive Styles
 │   └── responsive.css        # Mobile & Tablet Breakpoints
 │── js/
-│   ├── script.js             # Main App Logic, Fetch API & LocalStorage
-│   └── register.js           # Registration Validation & Storage
+│   ├── script.js             # Main App Logic, Schedule, Announcements & LocalStorage
+│   ├── speakers.js           # Speakers Search, Filter & Image Fallback Module
+│   └── register.js           # Form Validation, Real-Time Alerts & Storage
 │── assets/
+│   ├── images/               # Speaker Photos (Sindhu, Athira, Vismaya, Shivani)
 │   └── data/
 │       ├── announcements.json # Live Announcements Data
-│       └── schedule.json      # Festival Schedule Data
-└── README.md                 # Documentation
+│       ├── schedule.json      # Festival Schedule Data
+│       └── speakers.json      # Guest Speakers Data
+└── README.md                 # Project Documentation
 ```
 
 ---
 
-## 📅 Status Checklist (4 Days to Demo Day)
+## 👥 Team Responsibilities
+
+### Shivani
+- **Speakers Page**: Complete UI/UX design, page structure, layout, styles, speaker cards, search filter, and favorite interactions
+- **Registration Page**: Complete UI/UX design, form structure, layout, styles, field validation, and registration storage
+- **Documentation**: Initial README setup and project documentation
+
+### Yogender Verma
+- **Home Page**: Complete UI/UX design, structure, hero section, launch countdown timer, live announcements, sponsors, and contact sections
+- **Schedule Page**: Complete UI/UX design, full-width event timeline, day filtering, and local schedule bookmarks
+- **Data & Persistence Layer**: Live `fetch()` API with fail-safe fallbacks, 3-state data handling, and `localStorage` integration
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: HTML5, Vanilla CSS3 (Custom Properties, Flexbox, CSS Grid, Glassmorphism Animations), Vanilla JavaScript (ES6+, Async/Await)
+- **Data & APIs**: Fetch API, Local JSON Data Stores, SVG Data Fallbacks
+- **Persistence**: Web Storage API (`localStorage`)
+- **Version Control**: Git & GitHub
+
+---
+
+## 📅 Status Checklist
 
 - [x] Day 1: Project Setup & Structure
 - [x] Day 2: Responsive HTML/CSS Layouts
 - [x] Day 3: Interactive Components & Countdown Timer
 - [x] Day 4: Form Validation & Speaker Interactions
-- [x] **Day 5: Live Data Fetching, Persistence & 3-State Error Handling**
-- [ ] Day 6: Final Polish, Micro-Interactions & Cross-Browser Testing
-- [ ] Demo Day Prep 🎉
+- [x] Day 5: Live Data Fetching, Persistence & 3-State Error Handling
+- [x] Day 6: UI Glassmorphism Redesign, Section Box Card Architecture & Mobile Polish
+- [x] Demo Day Prep 🎉
 
 ---
 
-Built with ❤️ as part of the ZyoraByte Frontend Internship.
+Built with ❤️ for the **ZyoraByte Frontend Internship**.
