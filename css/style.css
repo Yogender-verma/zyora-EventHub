@@ -106,6 +106,7 @@ p {
 .gradient-text {
   background: linear-gradient(135deg, #60A5FA 0%, #A78BFA 50%, #38BDF8 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -177,6 +178,7 @@ header h1 {
   font-size: 1.5rem;
   background: linear-gradient(135deg, #FFFFFF 0%, #94A3B8 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -700,6 +702,7 @@ main {
   font-weight: 800;
   background: linear-gradient(135deg, #60A5FA, #38BDF8);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
