@@ -61,6 +61,30 @@ zyora-EventHub/
 
 ---
 
+## 🏃‍♂️ How to Run Locally
+
+Since this project uses vanilla HTML, CSS, and JavaScript with the Fetch API, you need a local web server to run it correctly and avoid CORS issues when fetching the local JSON files.
+
+### Using VS Code (Recommended)
+1. Install the **Live Server** extension by Ritwick Dey.
+2. Open this project folder in VS Code.
+3. Right-click on `index.html` and select **Open with Live Server**.
+4. The app will launch in your default browser at `http://localhost:5500`.
+
+### Using Python
+If you have Python installed, you can easily start a local server:
+1. Open your terminal in the project directory.
+2. Run `python -m http.server 8000` (or `python3 -m http.server 8000`).
+3. Open your browser and navigate to `http://localhost:8000`.
+
+### Using Node.js
+If you have Node.js installed, you can use `http-server` or `serve`:
+1. Open your terminal in the project directory.
+2. Run `npx serve .` or `npx http-server`.
+3. Follow the output link to view the app in your browser.
+
+---
+
 ## 👥 Team Responsibilities
 
 ### Shivani
