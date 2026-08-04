@@ -85,17 +85,33 @@ If you have Node.js installed, you can use `http-server` or `serve`:
 
 ---
 
-## 👥 Team Responsibilities
+## 👥 Team Contributions & Learnings
 
 ### Shivani
-- **Speakers Page**: Complete UI/UX design, page structure, layout, styles, speaker cards, search filter, and favorite interactions
-- **Registration Page**: Complete UI/UX design, form structure, layout, styles, field validation, and registration storage
-- **Documentation**: Initial README setup and project documentation
+
+**What Shivani Built:**
+- **Speakers Page**: Complete UI/UX design, page structure, layout, styles, speaker cards, search filter, and favorite interactions.
+- **Registration Page**: Complete UI/UX design, form structure, layout, styles, field validation, and registration storage.
+- **Documentation**: Initial README setup and project documentation.
+
+**What Shivani Learned:**
+- Mastered modern CSS techniques (Grid, Flexbox) to create responsive, multi-column layouts like the speaker grid and registration form.
+- Gained hands-on experience with DOM manipulation and event handling for real-time form validation and interactive search filters.
+- Learned how to effectively use the Web Storage API (`localStorage`) to save user preferences such as favorite speakers and persist registration data.
+- Developed skills in crafting a cohesive visual experience using the glassmorphism design system and modern UI principles.
 
 ### Yogender Verma
-- **Home Page**: Complete UI/UX design, structure, hero section, launch countdown timer, live announcements, sponsors, and contact sections
-- **Schedule Page**: Complete UI/UX design, full-width event timeline, day filtering, and local schedule bookmarks
-- **Data & Persistence Layer**: Live `fetch()` API with fail-safe fallbacks, 3-state data handling, and `localStorage` integration
+
+**What Yogender Built:**
+- **Home Page**: Complete UI/UX design, structure, hero section, launch countdown timer, live announcements, sponsors, and contact sections.
+- **Schedule Page**: Complete UI/UX design, full-width event timeline, day filtering, and local schedule bookmarks.
+- **Data & Persistence Layer**: Live `fetch()` API with fail-safe fallbacks, 3-state data handling, and `localStorage` integration.
+
+**What Yogender Learned:**
+- Deepened knowledge of asynchronous JavaScript (`async/await`, Fetch API) by dynamically loading JSON data and managing complex loading/success/error UI states.
+- Handled advanced DOM manipulation to construct complex, interactive components like the full-width schedule timeline and category filtering.
+- Implemented robust fail-safe mechanisms, including offline `file://` fallback strategies and SVG fallbacks, ensuring the application remains resilient under poor network conditions.
+- Enhanced state management skills by using `localStorage` to persist bookmarked events and synchronize live data across the application.
 
 ---
 
